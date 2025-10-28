@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Superman Site 💥</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    img {
+      width: 300px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+
+    video {
+      display: none;
+      width: 80%;
+      max-width: 700px;
+      margin-top: 20px;
+      border: 3px solid #ff0000;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Clique no símbolo do Superman!</h1>
+
+  <!-- Imagem -->
+  <img src="images.jpg" alt="Símbolo do Superman" id="superman">
+
+  <!-- Vídeo escondido -->
+  <video id="video" controls>
+    <source src="video.mp4" type="video/mp4">
+    Seu navegador não suporta vídeos.
+  </video>
+
+  <script>
+    const imagem = document.getElementById("superman");
+    const video = document.getElementById("video");
+
+    imagem.addEventListener("click", () => {
+      video.style.display = "block"; // Mostra o vídeo
+      video.play(); // Começa a tocar com som
+    });
+  </script>
+
+</body>
+</html>
